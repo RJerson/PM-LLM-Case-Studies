@@ -47,11 +47,37 @@ function getConversationMessages(conversation) {
             node.message.author.role != "system") {
             author = node.message.author.role;
             if (author === "assistant") {
-                author = "ChatGPT";
+                author = "GPT-4";
             }
             messages.push({ author, text: node.message.content.parts[0] });
         }
         currentNode = node.parent;
     }
-    return messages. Reverse();
+    return messages.reverse();
 }
+
+// on load, add messages to the root div 
+window.onload = function() {
+    var root = document.getElementById("root");
+    for (var i = 0; i < jsonData.length; i++) {
+        var conversation = jsonData[i];
+        var messages = getConversationMessages(conversation);
+        var div = document.createElement("div");
+        div.className = "conversation";
+        div.innerHTML = "<h4>" + conversation.title + "</h4>";
+        for (var j = 0; j < messages.length; j++) {
+            var message = document.createElement("pre");
+            message.className = "message";
+            message.innerHTML = `<div class="author">${messages[j].author}</div><div>${messages[j].text}</div>`;
+            div.appendChild(message);
+        }
+        root.appendChild(div);
+    }
+}
+    </script>
+</head>
+<body>
+<div id="root">
+</div>
+</body>
+</html>
