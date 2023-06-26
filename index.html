@@ -63,7 +63,7 @@
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
         // Initialize Firestore
-const db = getFirestore(app);     
+     
     </script>
     <script>
         //GPT script
@@ -93,6 +93,7 @@ function getConversationMessages(conversation) {
 // on load, add messages to the root div 
 window.onload = function() {
     // Get the root div
+    const db = getFirestore(app);
     var root = document.getElementById("root");
 
     // Generate a random index within the range of jsonData array
