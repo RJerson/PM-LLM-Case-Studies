@@ -76,7 +76,7 @@ function getConversationMessages(conversation) {
             && node.message.content.parts.length > 0 &&
             node.message.content.parts[0].length > 0 && 
             node.message.author.role != "system") {
-            author = node.message.author.role;
+            var author = node.message.author.role;
             if (author === "assistant") {
                 author = "GPT-4";
             }
