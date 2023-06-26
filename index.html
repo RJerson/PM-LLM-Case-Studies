@@ -32,12 +32,9 @@
         }
     </style>
     
-    <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
-
-    <!-- Add Firestore library -->
-    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"></script>
-
+    <!-- Firebase App (the core Firebase SDK) and Firestore library --> 
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js" type="module"></script>
 
     <!-- Firebase configuration -->
     <script type="module">
@@ -46,6 +43,7 @@
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
   import { getFirestore } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
         // TODO: Add SDKs for Firebase products that you want to use
+        
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
