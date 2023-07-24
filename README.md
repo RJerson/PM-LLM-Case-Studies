@@ -1,10 +1,7 @@
-# PM-LLM-Case-Studies
-Here is a simple code to survey PM practitioners using random selection of case studies to evaluate LLMs
+
 <!DOCTYPE html>
 <html>
-<head>
-    <title>README: GPT-4 Case Studies</title>
-</head>
+
 <body>
     <h1>GPT-4 Case Studies</h1>
     <p>This HTML document uses JavaScript to interact with Firebase and Firestore. Its primary functionality includes:</p>
